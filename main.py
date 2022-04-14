@@ -20,7 +20,7 @@ except KeyError:
     logging.exception("Please enter MONGODB_URI in .env file")
     sys.exit(1)
 
-client = MongoClient()
+client = MongoClient(MONGODB_URI)
 
 db = client['py-api-DB']
 people = db['people']
